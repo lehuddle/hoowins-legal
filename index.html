@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hoowins — Confidentialité & CGU</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0F0B1E;
+    --surface:#1B1533;
+    --surface-alt:#241C42;
+    --border:#332A5C;
+    --text:#F5F3FF;
+    --text-muted:#A79FCB;
+    --accent:#FFC857;
+    --coral:#FF4D6D;
+    --teal:#3DD9C9;
+    --display:'Archivo Black', 'Arial Narrow Bold', sans-serif;
+    --body:'Source Sans 3', -apple-system, sans-serif;
+    --mono:'JetBrains Mono', ui-monospace, monospace;
+    color-scheme: dark;
+    box-sizing:border-box;
+  }
+  html{ scroll-padding-top:84px; }
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--body);
+    font-size:16px;
+    line-height:1.6;
+  }
+  .wrap{ max-width:720px; margin:0 auto; padding-inline:20px; }
+
+  .topbar{
+    position:sticky; top:0; z-index:10;
+    background:rgba(15,11,30,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  .topbar-inner{
+    max-width:720px; margin:0 auto; padding:14px 20px;
+    display:flex; align-items:center; justify-content:space-between;
+    gap:12px; flex-wrap:wrap;
+  }
+  .wordmark{ font-family:var(--display); font-size:15px; letter-spacing:1.5px; color:var(--accent); }
+  .tabs{
+    display:flex; gap:6px; background:var(--surface);
+    border:1px solid var(--border); border-radius:999px; padding:3px;
+  }
+  .tab{
+    appearance:none; border:0; background:transparent; color:var(--text-muted);
+    font-family:var(--body); font-weight:600; font-size:13px;
+    padding:7px 14px; border-radius:999px; cursor:pointer;
+  }
+  .tab[aria-pressed="true"]{ background:var(--coral); color:#fff; }
+  .langbtn{
+    appearance:none; border:1px solid var(--border); background:var(--surface); color:var(--text);
+    font-family:var(--mono); font-weight:500; font-size:12px; letter-spacing:0.5px;
+    padding:7px 12px; border-radius:999px; cursor:pointer;
+  }
+  .langbtn:hover{ border-color:var(--accent); }
+
+  .hero{ padding-block:36px 24px; }
+  .hero h1{
+    font-family:var(--display); font-size:clamp(28px, 7vw, 40px);
+    line-height:1.08; letter-spacing:0.5px; margin:0 0 10px;
+    text-wrap:balance; color:var(--text);
+  }
+  .accent{ color:var(--accent); }
+  .hero p{ color:var(--text-muted); max-width:56ch; margin:0; }
+  .meta{
+    display:flex; gap:16px; flex-wrap:wrap; margin-top:18px;
+    font-family:var(--mono); font-size:12px; color:var(--text-muted); letter-spacing:0.3px;
+  }
+  .meta b{ color:var(--teal); font-weight:500; }
+
+  section.doc{ padding-bottom:16px; }
+  h1{ font-family:var(--display); }
+  h2{
+    font-family:var(--display); font-size:20px; letter-spacing:0.3px;
+    color:var(--accent); margin:40px 0 6px; text-wrap:balance;
+  }
+  h2:first-of-type{ margin-top:8px; }
+  p{ margin:0 0 14px; }
+  ul{ margin:0 0 14px; padding-left:1.1em; }
+  li{ margin-bottom:6px; }
+  a{ color:var(--teal); }
+  strong{ color:var(--text); }
+
+  .card{
+    background:var(--surface); border:1px solid var(--border);
+    border-radius:16px; padding:16px 18px; margin:14px 0 20px;
+  }
+  .card h3{ margin:0 0 8px; color:var(--accent); font-size:13px; text-transform:uppercase; letter-spacing:0.6px; }
+  .card p:last-child{ margin-bottom:0; }
+
+  .grid{
+    display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr));
+    gap:10px; margin:14px 0 20px;
+  }
+  .tile{ background:var(--surface-alt); border:1px solid var(--border); border-radius:14px; padding:14px; }
+  .tile .k{
+    font-family:var(--mono); font-size:11px; color:var(--teal); letter-spacing:0.4px;
+    text-transform:uppercase; display:block; margin-bottom:6px;
+  }
+  .tile .v{ font-size:14px; color:var(--text); }
+
+  .divider{ border:0; border-top:1px solid var(--border); margin:40px 0; }
+
+  .contact-pill{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--surface); border:1px solid var(--border); border-radius:999px;
+    padding:9px 16px; font-family:var(--mono); font-size:13px; color:var(--text);
+  }
+
+  footer{
+    padding-block:24px 32px; color:var(--text-muted); font-size:12px; text-align:center;
+  }
+  [hidden]{ display:none !important; }
+
+  @media (max-width:480px){
+    .topbar-inner{ padding:12px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <span class="wordmark">HOOWINS</span>
+    <div class="tabs" role="tablist" aria-label="Document">
+      <button class="tab" id="tab-confidentialite" role="tab" aria-pressed="true" onclick="showDoc('confidentialite')">Confidentialité</button>
+      <button class="tab" id="tab-cgu" role="tab" aria-pressed="false" onclick="showDoc('cgu')">CGU</button>
+      <button class="tab" id="tab-support" role="tab" aria-pressed="false" onclick="showDoc('support')">Support</button>
+    </div>
+    <button class="langbtn" id="langbtn" onclick="toggleLang()">EN</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ================= FRANÇAIS ================= -->
+  <div id="lang-fr">
+
+    <div class="hero">
+      <h1 id="confidentialite">Politique de <span class="accent">confidentialité</span></h1>
+      <p>Comment l'application Hoowins traite (et surtout ne traite pas) tes données.</p>
+      <div class="meta">
+        <span>Dernière mise à jour : <b>6 novembre 2026</b></span>
+        <span>Éditeur : <b>Anthony Raitif</b></span>
+        <span>Contact : <b>lehuddle.pro@gmail.com</b></span>
+      </div>
+    </div>
+
+    <section class="doc" id="doc-confidentialite-fr">
+      <div class="grid">
+        <div class="tile"><span class="k">Compte requis</span><span class="v">Non</span></div>
+        <div class="tile"><span class="k">Données envoyées à un serveur</span><span class="v">Aucune</span></div>
+        <div class="tile"><span class="k">Publicité / tracking tiers</span><span class="v">Aucun</span></div>
+        <div class="tile"><span class="k">Vente de données</span><span class="v">Jamais</span></div>
+      </div>
+
+      <h2>Ce que l'app enregistre</h2>
+      <p>Hoowins fonctionne sans compte et sans serveur. Tout ce que l'app retient est stocké <strong>uniquement sur ton appareil</strong> (mémoire locale de l'application) et n'est jamais transmis à qui que ce soit :</p>
+      <ul>
+        <li>le ou les prénoms que tu saisis pour jouer à plusieurs ;</li>
+        <li>tes scores, séries et meilleurs résultats ;</li>
+        <li>la langue choisie ;</li>
+        <li>le nombre de combats joués gratuitement et ton statut Premium (actif ou non).</li>
+      </ul>
+      <p>Si tu désinstalles l'application, toutes ces données sont supprimées avec elle.</p>
+
+      <h2>Achats intégrés (abonnement Premium)</h2>
+      <p>L'abonnement Premium est entièrement géré par <strong>Apple (App Store)</strong> ou <strong>Google (Google Play)</strong> selon ton appareil. Hoowins ne voit, ne stocke et ne traite à aucun moment tes coordonnées bancaires — l'app reçoit uniquement une confirmation que l'abonnement est actif.</p>
+
+      <h2>Enfants</h2>
+      <p>Hoowins n'est pas spécifiquement destiné aux enfants de moins de 13 ans et ne collecte sciemment aucune donnée les concernant.</p>
+
+      <h2>Tes droits</h2>
+      <p>Puisqu'aucune donnée ne quitte ton appareil, tu gardes à tout moment le contrôle total : effacer ou réinstaller l'application supprime immédiatement toutes les données associées. Pour toute question, écris-nous à l'adresse ci-dessous.</p>
+
+      <h2>Modifications</h2>
+      <p>Cette politique peut évoluer si l'application change (par exemple l'ajout d'un classement en ligne). La date de mise à jour en haut de page reflète toujours la version en vigueur.</p>
+
+      <hr class="divider">
+
+      <h1 id="cgu" style="margin-top:0">Conditions générales <span class="accent">d'utilisation</span></h1>
+      <p style="margin-bottom:28px">Les règles du jeu, au sens propre comme au figuré.</p>
+
+      <section id="doc-cgu-fr">
+        <h2>Le service</h2>
+        <p>Hoowins est un jeu mobile de culture générale et d'humour : deux camps imaginaires s'affrontent, tu devines qui l'emporterait. Les verdicts et leurs explications sont écrits à des fins de <strong>divertissement</strong> et ne constituent ni une vérité scientifique ni un conseil d'aucune sorte.</p>
+
+        <h2>Abonnement Hoowins Premium</h2>
+        <div class="card">
+          <h3>Ce que tu dois savoir avant d'acheter</h3>
+          <p><strong>Durée :</strong> 1 an, renouvellement automatique<br>
+          <strong>Prix :</strong> 1,99&nbsp;$ US (ou l'équivalent dans ta devise locale, converti automatiquement par l'App Store / Google Play)<br>
+          <strong>Avantage :</strong> combats illimités, sans minuteur d'attente</p>
+        </div>
+        <p>L'abonnement se renouvelle automatiquement à la fin de chaque période, sauf si tu le résilies au moins 24 heures avant son échéance. La résiliation se fait exclusivement depuis les réglages de ton compte <strong>App Store</strong> ou <strong>Google Play</strong> — Hoowins n'a pas la main sur ton moyen de paiement et ne peut pas effectuer de remboursement directement ; les demandes de remboursement suivent les politiques d'Apple ou de Google.</p>
+        <p>Sans abonnement, l'accès reste gratuit à hauteur de 10 combats, renouvelés toutes les 6 heures.</p>
+
+        <h2>Utilisation du jeu</h2>
+        <p>Tu t'engages à ne pas tenter de contourner, désassembler ou exploiter techniquement l'application (par exemple pour débloquer le Premium sans y souscrire).</p>
+
+        <h2>Propriété intellectuelle</h2>
+        <p>Le nom Hoowins, son identité visuelle et ses textes sont la propriété de l'éditeur. Les émojis et éléments graphiques tiers restent soumis à leurs propres licences.</p>
+
+        <h2>Limitation de responsabilité</h2>
+        <p>Hoowins est fourni « en l'état », à but de divertissement. L'éditeur ne garantit pas une disponibilité ininterrompue du service et ne saurait être tenu responsable d'un usage détourné des contenus humoristiques de l'application.</p>
+
+        <h2>Droit applicable</h2>
+        <p>Les présentes conditions sont soumises au droit français. Tout litige sera porté devant les tribunaux compétents, sauf disposition impérative contraire applicable à ta résidence.</p>
+      </section>
+
+      <hr class="divider">
+
+      <h1 id="support" style="margin-top:0">Support <span class="accent">Hoowins</span></h1>
+      <p style="margin-bottom:28px">Une question, un bug, un abonnement à gérer ? On est là.</p>
+
+      <h2>Nous contacter</h2>
+      <p>Pour toute question sur l'application, un bug rencontré ou une suggestion de combat, écris-nous :</p>
+      <p style="text-align:center">
+        <a class="contact-pill" href="mailto:lehuddle.pro@gmail.com">✉️ lehuddle.pro@gmail.com</a>
+      </p>
+
+      <h2>Questions fréquentes</h2>
+      <div class="card">
+        <h3>Comment annuler mon abonnement Premium ?</h3>
+        <p>L'abonnement est géré par l'App Store ou Google Play, pas par Hoowins directement. Sur iPhone : Réglages → ton nom → Abonnements. Sur Android : Google Play Store → menu → Abonnements. Choisis Hoowins puis Annuler.</p>
+      </div>
+      <div class="card">
+        <h3>J'ai changé de téléphone, comment récupérer mon abonnement ?</h3>
+        <p>Ouvre Hoowins, va jusqu'à l'écran d'achat Premium et appuie sur « Restaurer mes achats ». Ton abonnement est rattaché à ton identifiant Apple ou Google, pas à l'appareil.</p>
+      </div>
+      <div class="card">
+        <h3>Comment supprimer mes données ?</h3>
+        <p>Toutes les données de Hoowins sont stockées uniquement sur ton téléphone. Désinstaller l'application les supprime intégralement et définitivement.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- ================= ENGLISH ================= -->
+  <div id="lang-en" hidden>
+
+    <div class="hero">
+      <h1 id="privacy">Privacy <span class="accent">Policy</span></h1>
+      <p>How the Hoowins app handles — and mostly doesn't handle — your data.</p>
+      <div class="meta">
+        <span>Last updated: <b>November 6, 2026</b></span>
+        <span>Publisher: <b>Anthony Raitif</b></span>
+        <span>Contact: <b>lehuddle.pro@gmail.com</b></span>
+      </div>
+    </div>
+
+    <section class="doc" id="doc-privacy-en">
+      <div class="grid">
+        <div class="tile"><span class="k">Account required</span><span class="v">No</span></div>
+        <div class="tile"><span class="k">Data sent to a server</span><span class="v">None</span></div>
+        <div class="tile"><span class="k">Ads / third-party tracking</span><span class="v">None</span></div>
+        <div class="tile"><span class="k">Data sold</span><span class="v">Never</span></div>
+      </div>
+
+      <h2>What the app stores</h2>
+      <p>Hoowins works without any account or server. Everything the app remembers is kept <strong>only on your device</strong> (local app storage) and is never sent anywhere:</p>
+      <ul>
+        <li>the name(s) you type in to play with friends;</li>
+        <li>your scores, streaks, and best results;</li>
+        <li>your chosen language;</li>
+        <li>how many free battles you've played and your Premium status.</li>
+      </ul>
+      <p>Uninstalling the app deletes all of this data along with it.</p>
+
+      <h2>In-app purchase (Premium subscription)</h2>
+      <p>The Premium subscription is handled entirely by <strong>Apple (App Store)</strong> or <strong>Google (Google Play)</strong>, depending on your device. Hoowins never sees, stores, or processes your payment details — the app only receives a confirmation that your subscription is active.</p>
+
+      <h2>Children</h2>
+      <p>Hoowins is not specifically directed at children under 13 and does not knowingly collect data about them.</p>
+
+      <h2>Your rights</h2>
+      <p>Since no data ever leaves your device, you stay fully in control at all times: deleting or reinstalling the app immediately removes all associated data. For any question, reach out at the address below.</p>
+
+      <h2>Changes</h2>
+      <p>This policy may change as the app evolves (for example, if an online leaderboard is added). The date at the top of the page always reflects the version in effect.</p>
+
+      <hr class="divider">
+
+      <h1 id="terms" style="margin-top:0">Terms of <span class="accent">Use</span></h1>
+      <p style="margin-bottom:28px">The rules of the game, literally and otherwise.</p>
+
+      <section id="doc-terms-en">
+        <h2>The service</h2>
+        <p>Hoowins is a comedic trivia game: two imaginary sides face off, and you guess who would win. The verdicts and their explanations are written purely for <strong>entertainment</strong> and are not scientific fact or advice of any kind.</p>
+
+        <h2>Hoowins Premium subscription</h2>
+        <div class="card">
+          <h3>Before you buy</h3>
+          <p><strong>Length:</strong> 1 year, auto-renewing<br>
+          <strong>Price:</strong> US$1.99 (or the equivalent in your local currency, converted automatically by the App Store / Google Play)<br>
+          <strong>Benefit:</strong> unlimited battles, no waiting timer</p>
+        </div>
+        <p>The subscription renews automatically at the end of each period unless cancelled at least 24 hours before renewal. Cancellation happens exclusively through your <strong>App Store</strong> or <strong>Google Play</strong> account settings — Hoowins has no access to your payment method and cannot issue refunds directly; refund requests follow Apple's or Google's own policies.</p>
+        <p>Without a subscription, access stays free for 10 battles, renewed every 6 hours.</p>
+
+        <h2>Using the game</h2>
+        <p>You agree not to attempt to bypass, reverse-engineer, or technically exploit the app (for example, to unlock Premium without subscribing).</p>
+
+        <h2>Intellectual property</h2>
+        <p>The Hoowins name, visual identity, and text content belong to the publisher. Third-party emoji and graphic elements remain subject to their own licenses.</p>
+
+        <h2>Limitation of liability</h2>
+        <p>Hoowins is provided "as is," for entertainment purposes. The publisher does not guarantee uninterrupted availability and is not liable for any misuse of the app's comedic content.</p>
+
+        <h2>Governing law</h2>
+        <p>These terms are governed by French law. Any dispute will be brought before the competent courts, except where mandatory local consumer law applies to your place of residence.</p>
+      </section>
+
+      <hr class="divider">
+
+      <h1 id="support-en" style="margin-top:0">Hoowins <span class="accent">Support</span></h1>
+      <p style="margin-bottom:28px">A question, a bug, a subscription to manage? We're here.</p>
+
+      <h2>Contact us</h2>
+      <p>For any question about the app, a bug you ran into, or a matchup suggestion, write to us:</p>
+      <p style="text-align:center">
+        <a class="contact-pill" href="mailto:lehuddle.pro@gmail.com">✉️ lehuddle.pro@gmail.com</a>
+      </p>
+
+      <h2>Frequently asked questions</h2>
+      <div class="card">
+        <h3>How do I cancel my Premium subscription?</h3>
+        <p>The subscription is managed by the App Store or Google Play, not by Hoowins directly. On iPhone: Settings → your name → Subscriptions. On Android: Google Play Store → menu → Subscriptions. Pick Hoowins, then Cancel.</p>
+      </div>
+      <div class="card">
+        <h3>I got a new phone — how do I get my subscription back?</h3>
+        <p>Open Hoowins, go to the Premium purchase screen, and tap "Restore purchases." Your subscription is tied to your Apple or Google account, not to the device.</p>
+      </div>
+      <div class="card">
+        <h3>How do I delete my data?</h3>
+        <p>All of Hoowins' data lives only on your phone. Uninstalling the app deletes it completely and permanently.</p>
+      </div>
+    </section>
+  </div>
+
+  <footer>Hoowins — © 2026 Anthony Raitif</footer>
+</div>
+
+<script>
+  (function(){
+    var frEl = document.getElementById('lang-fr');
+    var enEl = document.getElementById('lang-en');
+    var btn = document.getElementById('langbtn');
+
+    function setLang(lang){
+      frEl.hidden = lang === 'en';
+      enEl.hidden = lang !== 'en';
+      btn.textContent = lang === 'en' ? 'FR' : 'EN';
+      document.documentElement.lang = lang;
+    }
+
+    function setPressed(doc){
+      ['confidentialite','cgu','support'].forEach(function(k){
+        document.getElementById('tab-' + k).setAttribute('aria-pressed', String(doc === k));
+      });
+    }
+
+    window.showDoc = function(doc){
+      var ids = {
+        fr: { confidentialite: 'confidentialite', cgu: 'cgu', support: 'support' },
+        en: { confidentialite: 'privacy', cgu: 'terms', support: 'support-en' }
+      };
+      var lang = enEl.hidden ? 'fr' : 'en';
+      setPressed(doc);
+      var el = document.getElementById(ids[lang][doc]);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+
+    window.toggleLang = function(){
+      var next = enEl.hidden ? 'en' : 'fr';
+      setLang(next);
+      try { localStorage.setItem('hoowins-legal-lang', next); } catch (e) {}
+    };
+
+    function applyHash(){
+      var h = (location.hash || '').replace('#', '');
+      var map = {
+        confidentialite: ['fr', 'confidentialite'], cgu: ['fr', 'cgu'], support: ['fr', 'support'],
+        privacy: ['en', 'confidentialite'], terms: ['en', 'cgu'], 'support-en': ['en', 'support']
+      };
+      if (!map[h]) return;
+      setLang(map[h][0]);
+      setPressed(map[h][1]);
+      var el = document.getElementById(h);
+      if (el) setTimeout(function(){ el.scrollIntoView({ block: 'start' }); }, 50);
+    }
+
+    try {
+      if (localStorage.getItem('hoowins-legal-lang') === 'en') setLang('en');
+    } catch (e) {}
+
+    applyHash();
+    window.addEventListener('hashchange', applyHash);
+  })();
+</script>
+
+</body>
+</html>
